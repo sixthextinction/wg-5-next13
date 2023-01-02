@@ -1,0 +1,7 @@
+query AlbumById($albumId: Int!) {
+  tracks: db_findManyTrack(where: { AlbumId: { equals: $albumId } }) {
+    TrackId
+    Name
+    Composer
+  }
+}
