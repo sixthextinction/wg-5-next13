@@ -27,9 +27,16 @@ export interface AlbumByIdResponse {
 }
 
 export interface AlbumByIdResponseData {
-	tracks: {
-		TrackId: number;
-		Name: string;
-		Composer?: string;
-	}[];
+	Album?: {
+		Title: string;
+		Artist: {
+			Name?: string;
+		};
+		Track?: {
+			TrackId: number;
+			Name: string;
+			Composer?: string;
+			Milliseconds: number;
+		}[];
+	};
 }

@@ -15,16 +15,6 @@ const Home: NextPage = () => {
   };
 
   // data.tracks is of type AlbumByIdResponseData, automatically typed.
-  // No need to define your own types/interfaces for this response. Nifty!
-  /*
-		export interface AlbumByIdResponseData {
-		tracks: {
-			TrackId: number;
-			Name: string;
-			Composer?: string;
-		}[];
-	}
-	*/
   const { data } = useQuery({
     operationName: "AlbumById",
     input: {
@@ -50,10 +40,7 @@ const Home: NextPage = () => {
               </button>
             </form>
           </div>
-          {/* <div className="w-40 text-cyan-400 dark:text-white">
-            <pre>{JSON.stringify(data?.tracks, null, 2)} </pre>
-          </div> */}
-          {data?.tracks && <DataTable tracks={data.tracks} />}
+          {data?.Album && <DataTable data={data} />}
         </div>
       </div>
     </div>

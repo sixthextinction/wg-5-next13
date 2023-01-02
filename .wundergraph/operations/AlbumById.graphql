@@ -1,7 +1,14 @@
-query AlbumById($albumId: Int!) {
-  tracks: db_findManyTrack(where: { AlbumId: { equals: $albumId } }) {
-    TrackId
-    Name
-    Composer
+query ($albumId: Int!) {
+  Album: db_findUniqueAlbum(where: { AlbumId: $albumId }) {
+    Title
+    Artist {
+      Name
+    }
+    Track {
+      TrackId
+      Name
+      Composer
+      Milliseconds
+    }
   }
 }
