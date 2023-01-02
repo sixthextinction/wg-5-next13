@@ -1,3 +1,8 @@
+# Usage
+`localhost:3000/` for Next.js <13/pages dir
+`localhost:3000/albums` for Next.js 13/app dir
+
+
 # WunderGraph Next.js Starter
 
 This example demonstrates how to use WunderGraph with Next.js. We are going to make your data-source accessible through JSON-RPC to your Next.js app.
