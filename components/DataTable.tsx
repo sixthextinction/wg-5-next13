@@ -1,3 +1,4 @@
+
 import React from "react";
 import secondsToTime from "../utils/secondsToTime";
 import { AlbumByIdResponseData } from "./generated/models";
@@ -8,7 +9,7 @@ type Props = {
 };
 
 const DataTable: React.FunctionComponent<Props> = ({ data }) => (
-  <div className="flex flex-col items-center text-cyan-400 dark:text-white">
+  <div className="flex flex-col items-center text-white">
     <p className="text-3xl font-bold my-4">&quot;{data?.Album?.Title}&quot;</p>
     <p className="text-lg font-bold mb-4"> {data?.Album?.Artist?.Name} </p>
     <table className="table-auto w-full">

@@ -12,7 +12,7 @@ import operations from "./wundergraph.operations";
 
 const db = introspect.postgresql({
   apiNamespace: "db",
-  databaseURL: "postgresql://test:test@localhost:5432/chinook",
+  databaseURL: `postgresql://${process.env.DB_PG_USER}:${process.env.DB_PG_PWD}@${process.env.DB_PG_HOST}:5432/chinook`,
 });
 
 // configureWunderGraph emits the configuration

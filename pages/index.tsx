@@ -26,7 +26,7 @@ const Home: NextPage = () => {
   return (
     <div>
       <div className="relative w-full px-4 pt-20 sm:pt-24 lg:pt-32">
-        <div className="">
+        <div>
           <div className="w-full p-4 m-4">
             <form onSubmit={handleSubmit} className="flex items-center">
               <input
