@@ -25,21 +25,29 @@ const Home: NextPage = () => {
 
   return (
     <div>
-      <div className="relative w-full px-4 pt-20 sm:pt-24 lg:pt-32">
+      <div className="relative w-full px-4 pt-4">
         <div>
-          <div className="w-full p-4 m-4">
-            <form onSubmit={handleSubmit} className="flex items-center">
+          <div className="flex items-center justify-center w-full p-4 mb-4">
+            <form onSubmit={handleSubmit} className="flex ">
+              <label className="py-2 px-4 text-black bg-sky-700 text-lg font-bold rounded-l-xl">
+                AlbumID
+              </label>
               <input
                 type="number"
                 value={newValue}
                 onChange={handleChange}
-                className="form-input w-32"
+                className="form-input w-32 py-2 px-4 text-black text-lg font-bold"
               />
-              <button type="submit" className="btn ml-4 text-white">
-                Submit
+              <button type="submit" className="bg-sky-700 hover:bg-cyan-400 text-white text-lg font-bold py-2 px-4 ml-0 hover:border-blue-500 rounded-r-xl">
+                Search
               </button>
             </form>
           </div>
+          {!newValue ? (
+            <div className="flex items-center justify-center mx-5 text-lg text-white">Enter an Album ID!</div>
+          ) : (
+            <></>
+          )}
           {data?.Album && <DataTable data={data} />}
         </div>
       </div>

@@ -1,4 +1,3 @@
-
 import React from "react";
 import secondsToTime from "../utils/secondsToTime";
 import { AlbumByIdResponseData } from "./generated/models";
@@ -9,7 +8,7 @@ type Props = {
 };
 
 const DataTable: React.FunctionComponent<Props> = ({ data }) => (
-  <div className="flex flex-col items-center text-white">
+  <div className="flex flex-col items-center ">
     <p className="text-3xl font-bold my-4">&quot;{data?.Album?.Title}&quot;</p>
     <p className="text-lg font-bold mb-4"> {data?.Album?.Artist?.Name} </p>
     <table className="table-auto w-full">
@@ -22,10 +21,10 @@ const DataTable: React.FunctionComponent<Props> = ({ data }) => (
       </thead>
       <tbody>
         {data?.Album?.Track.map((track) => (
-          <tr key={track.TrackId}>
-            <td className="border-2  px-4 py-2">{track.Name}</td>
-            <td className="border-2  px-4 py-2">{track.Composer}</td>
-            <td className="border-2 px-4 py-2">
+          <tr className="hover:bg-cyan-500 hover:text-zinc-900" key={track.TrackId}>
+            <td className="border-2  px-4 py-2 ">{track.Name}</td>
+            <td className="border-2  px-4 py-2 ">{track.Composer}</td>
+            <td className="border-2 px-4 py-2 ">
               {secondsToTime(track.Milliseconds / 1000)}
             </td>
           </tr>

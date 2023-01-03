@@ -5,13 +5,13 @@ type Props = {
   children: React.ReactNode;
 };
 
-const layout = (props: Props) => {
+export default function AlbumsLayout(props: Props) {
   return (
-    <div className="dark:bg-slate-800 min-h-screen justify-center">
-      <div className="relative w-full px-4 pt-20 sm:pt-24 lg:pt-32">
+    <div className="text-cyan-500 bg-zinc-900 min-h-screen">
+      <div className="w-full px-4 pt-4">
         <div>
           {/* client component */}
-          <div className="w-full p-4 m-4">
+          <div className="flex items-center justify-center w-full p-4 mb-4">
             <AlbumForm />
           </div>
           {/* server component, needs to be child */}
@@ -22,4 +22,3 @@ const layout = (props: Props) => {
   );
 };
 
-export default layout;
