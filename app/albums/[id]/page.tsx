@@ -31,7 +31,7 @@ export default async function AlbumPage(props: Props) {
   return (
     <div>
       {(!res.ok)? <div> Error! </div>:<></>}
-      <Suspense fallback={<p className="mx-5 text-lg text-white">Loading...</p>}>
+      <Suspense fallback={<p> Loading...</p>}>
         {/* don't need the conditional rendering with && anymore since we're already using Suspense w/ fallback */}
         <DataTable data={data} />
       </Suspense>

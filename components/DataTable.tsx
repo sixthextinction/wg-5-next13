@@ -9,9 +9,9 @@ type Props = {
 
 const DataTable: React.FunctionComponent<Props> = ({ data }) => (
   <div className="flex flex-col items-center ">
-    <p className="text-3xl font-bold my-4">&quot;{data?.Album?.Title}&quot;</p>
-    <p className="text-lg font-bold mb-4"> {data?.Album?.Artist?.Name} </p>
-    <table className="table-auto w-full">
+    <p className="text-3xl text-white font-bold mt-8">&quot;{data?.Album?.Title}&quot;</p>
+    <p className="text-lg text-cyan-100 font-bold mt-2 mb-12"> {data?.Album?.Artist?.Name} </p>
+    <table className="table-fixed w-full">
       <thead>
         <tr>
           <th className="border-2 px-4 py-2">Name</th>
@@ -21,7 +21,10 @@ const DataTable: React.FunctionComponent<Props> = ({ data }) => (
       </thead>
       <tbody>
         {data?.Album?.Track.map((track) => (
-          <tr className="hover:bg-cyan-500 hover:text-zinc-900" key={track.TrackId}>
+          <tr
+            className="hover:bg-cyan-500 hover:text-zinc-900 hover:font-bold cursor-pointer"
+            key={track.TrackId}
+          >
             <td className="border-2  px-4 py-2 ">{track.Name}</td>
             <td className="border-2  px-4 py-2 ">{track.Composer}</td>
             <td className="border-2 px-4 py-2 ">
