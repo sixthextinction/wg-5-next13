@@ -5,7 +5,7 @@ type Props = {
   children: React.ReactNode;
 };
 
-export default function AlbumsLayout(props: Props) {
+const AlbumsLayout = (props: Props) => {
   return (
     <div className="relative text-cyan-500 bg-zinc-900 min-h-screen">
       <div className="absolute right-0 top-0 mt-2 mx-8 text-sm text-white">
@@ -24,3 +24,5 @@ export default function AlbumsLayout(props: Props) {
     </div>
   );
 }
+
+export default AlbumsLayout;
